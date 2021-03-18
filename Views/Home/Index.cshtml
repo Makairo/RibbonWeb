@@ -1,0 +1,33 @@
+﻿
+@model IEnumerable<RibbonWeb.Models.UserLog>;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RibbonWeb</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a class="active-page" asp-action="Index">Ribbon</a></li>
+            <li><a asp-action="Support">Support</a></li>
+            <li><a asp-action="ListLogs">View Logs</a></li>
+        </ul>
+
+    </div>
+    <div class="center">
+        <p>
+            Welcome to RibbonWeb, a personal assistant WIP by Andrew Hejl.<br />
+            (To do: everything.)
+        </p>
+    </div>
+    <div class="ribbonBox">
+       
+    </div>
+    <div class="userInput">
+        <input type="text" id="userInput" placeholder="Type here . . . " title="Type here . . . " />
+        <button type="submit">Enter</button>
+    </div>
+</body>
+</html>

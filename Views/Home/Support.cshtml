@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+@model RibbonWeb.Models.UserLog
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RibbonWeb</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a asp-action="Index">Ribbon</a></li>
+            <li><a class="active-page" asp-action="Support">Support</a></li>
+            <li><a asp-action="ListLogs">View Logs</a></li>
+        </ul>
+
+    </div>
+    <div class="center">
+       This is the debugging page. Use at own risk.
+    </div>
+    <form asp-action="Support" method="post" class="center">
+        <div>
+            <label asp-for="ID">Your ID:</label>
+            <input asp-for="ID" />
+        </div>
+        <div>
+            <label asp-for="Name">Your Name:</label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="UserAction">Your Action:</label>
+            <input asp-for="UserAction" />
+        </div>
+        <div>
+            <label asp-for="RibbonAction">Your Responce:</label>
+            <input asp-for="RibbonAction" />
+        </div>
+        <div>
+            <label asp-for="Date">Date</label>
+            <input asp-for="Date" />
+        </div>
+        <button type="submit">Submit Information</button>
+    </form>
+</body>
+</html>

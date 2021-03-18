@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RibbonWeb.Models.UserLog>;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RibbonWeb</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a asp-action="Index">Ribbon</a></li>
+            <li><a asp-action="Support">Support</a></li>
+            <li><a class="active-page" asp-action="ListLogs">View Logs</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <p>User Input Log:</p>
+    </div>
+    <table class="center">
+        <thead><tr><th>ID</th><th>Name</th><th>Action</th><th>Responce</th><th>Date</th></tr></thead>
+        <tbody>
+            @foreach (RibbonWeb.Models.UserLog l in Model)
+            {
+            <tr>
+                <td>@l.ID</td>
+                <td>@l.Name</td>
+                <td>@l.UserAction</td>
+                <td>@l.RibbonAction</td>
+                <td>@l.Date</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

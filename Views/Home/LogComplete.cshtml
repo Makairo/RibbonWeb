@@ -1,0 +1,26 @@
+﻿@model RibbonWeb.Models.UserLog;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RibbonWeb</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a asp-action="Index">Ribbon</a></li>
+            <li><a class="active-page" asp-action="Support">Support</a></li>
+            <li><a asp-action="ListLogs">View Logs</a></li>
+        </ul>
+
+    </div>
+    <div class="center">
+        <p>Log Complete, thank you @Model.Name! <a asp-action="ListLogs">View Logs.</a></p>
+    </div>
+
+</body>
+</html>
